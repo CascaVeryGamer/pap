@@ -1,0 +1,12 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: lightgray;
+}
+
+.info-box {
+    background-color: lightblue;
+    height: 150px;
+    border: 1px solid black;
+}

@@ -1,0 +1,201 @@
+<h1>Perguntas Frequentes</h1>
+        <div class="container">
+            <div class="accordion">
+                <div class="item" id="questao1">
+                    <a class="accordion-link" href="#questao1">As plantas vêm com vasos incluídos?
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <div class="resposta">
+                        <p>
+                            Sim, a maioria das nossas plantas é vendida com vasos incluídos, mas isso pode variar conforme o produto.
+                            Na descrição de cada planta no site, encontrará informações detalhadas sobre o tipo de vaso que acompanha o produto.
+                            Caso prefira escolher um vaso diferente, também disponibilizamos uma seleção de vasos vendidos separadamente.
+                        </p>
+                    </div>
+                </div>
+                <div class="item" id="questao2">
+                    <a class="accordion-link" href="#questao2">É necessário regar a planta com que frequência?
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <div class="resposta">
+                        <p>
+                            A frequência de rega depende do tipo de planta.
+                            Consulte as instruções específicas fornecidas na descrição de cada planta no nosso site para garantir os melhores cuidados.
+                        </p>
+                    </div>
+                </div>
+                <div class="item" id="questao3">
+                    <a class="accordion-link" href="#questao3">Como faço uma encomenda?
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <div class="resposta">
+                        <p>
+                            Fazer uma encomenda na nossa loja online é simples e rápido, basta seguir estes passos:<br>
+                                <br>1 - Explore o nosso catálogo e escolha os produtos que pretende.</br>
+                                <br>2 - Clique em "Adicionar ao carrinho" para incluir os artigos selecionados.</br>
+                                <br>3 - Quando terminar as suas escolhas, aceda ao carrinho e clique em "Finalizar compra".</br>
+                                <br>4 - Preencha as informações de envio e escolha o método de pagamento desejado.</br>
+                                <br>5 - Confirme o pedido. Receberá um e-mail com os detalhes da encomenda e o acompanhamento da entrega.
+                            </li>
+                        </p>
+                    </div>
+                </div>
+                <div class="item" id="questao4">
+                    <a class="accordion-link" href="#questao4">Quanto tempo demora a entrega?
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <div class="resposta">
+                        <p>Ut dolor recusandae aut voluptatum consequatur quo exercitationem dicta At facilis soluta.
+                        Sed voluptatibus voluptatem hic magni autem id esse veritatis ea sapiente inventore sit galisum rerum.</p>
+                    </div>
+                </div>
+                <div class="item" id="questao5">
+                    <a class="accordion-link" href="#questao5">O que fazer se a planta chegar danificada?
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <div class="resposta">
+                        <p>Ut dolor recusandae aut voluptatum consequatur quo exercitationem dicta At facilis soluta.
+                        Sed voluptatibus voluptatem hic magni autem id esse veritatis ea sapiente inventore sit galisum rerum.</p>
+                    </div>
+                </div>
+                <div class="item" id="questao6">
+                    <a class="accordion-link" href="#questao6">Como posso entrar em contacto para esclarecer dúvidas?
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <div class="resposta">
+                        <p>Ut dolor recusandae aut voluptatum consequatur quo exercitationem dicta At facilis soluta.
+                        Sed voluptatibus voluptatem hic magni autem id esse veritatis ea sapiente inventore sit galisum rerum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="pag2" class="pag2">
+            <div class="form-container">
+                <h1>Alguma Dúvida?</h1>
+                <p>Pode fazer-nos qualquer questão sobre plantas</p>
+                <form action="enviar_emails.php" method="POST">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Insira o seu email" required>
+                  
+                  <label for="question">Questão</label>
+                  <textarea id="question" name="question" placeholder="Escreva a sua questão" rows="4" required></textarea>
+                  
+                  <button type="submit">Enviar</button>
+                </form>
+              </div>
+        </section>
+
+        css
+
+        h1{
+            position: absolute;
+            font-size: 32px;
+            color: #fff;
+            top: 5%;
+            left: 50%; 
+            transform: translate(-50%);
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        
+        .container{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+        
+        .item{
+            background-color: #F1EBE5;
+            border-radius: .4rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            box-shadow: .5rem 2px .5rem rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-link{
+            font-size: 1.4rem;
+            color: #423F32;
+            text-decoration: none;
+            background-color: #F1EBE5;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: 1rem 0;
+            font-weight: bold;
+        }
+        
+        .accordion-link i{
+            color: #423F32;
+            padding: .5rem;
+            display: flex;
+            margin-left: auto;
+            justify-content: right;
+            align-items: right;
+        }
+        
+        .accordion-link .fa-minus{
+            display: none;
+        }
+        
+        .resposta{
+            max-height: 0;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            background-color: #e4ded8;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .resposta.ativo{
+            max-height: 20rem;
+        }
+        
+        .resposta::before{
+            content: "";
+            position: absolute;
+            width: .6rem;
+            height: 100%;
+            background-color: #423F32;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        
+        .resposta p{
+            color: #423F32;
+            font-size: 1.4rem;
+            padding: 2rem;
+        }
+        
+        .item:target .resposta{
+            max-height: none;
+            transition: max-height 650ms;
+            transform: scaleY(1);
+        }
+        
+        .item:target .accordion-link .fa-plus{
+            display: none;
+        }
+        
+        .item:target .accordion-link .fa-minus{
+            display: block;
+        }

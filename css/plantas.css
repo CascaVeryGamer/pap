@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif+Caption&family=PT+Serif:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "PT Serif", serif;
+}
+
+body{
+    background-color: #F1EBE5;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+main{
+    max-width: 1500px;
+    width: calc(100% - 270px);
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    top: 130px;
+    padding-top: 80px;
+    margin-right: 10px;
+    margin-left: 340px;
+    gap: 10px;
+    position: relative;
+}
+
+main .card{
+    max-width: 300px;
+    border-radius: 22px;
+    flex: 1 1 210px;
+    text-align: center;
+    height: 450px;
+    border: 1px solid #000;
+    background-color: #000;
+    margin: 20px;
+    position: relative;
+}
+
+main .card .imagem{
+    height: 50%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+main .card .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+main .card .favoritos{
+    padding-left: 1em;
+    text-align: left;
+    line-height: 3em;
+    height: 25%;
+}
+
+main .card .favoritos p{
+    font-size: 1.5rem;
+}
+
+del{
+    text-decoration: line-through;
+}
+
+main .card .favoritos .favorito{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .card .caption .favorito i{
+    margin-left: 2px;
+}
+
+main .card a{
+    width: 50%;
+}
+
+main .card .ver{
+    border-radius: 10px;
+    padding: 1em;
+    background-color: #415B4F;
+    font-size: 16px;
+    color: #fff;
+    width: 30%;
+    cursor: pointer;
+    margin-top: 1em;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+main .card .ver:hover{
+    background-color: #557566;
+}
+
+#btn1, #btn2{
+    color: lightcoral;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.nome_planta{
+    font-size: 20px!important;
+    justify-content: center;
+    color: #fff;
+}
+
+.preço{
+    color: #fff;
+}
+
+main .card .favoritos .favorito button{
+    position: absolute;
+    top: 10px;  
+    right: 10px;  
+    z-index: 10;
+}
+
+.filtros {
+    padding: 20px;
+    position: absolute;
+    border-radius: 15px;
+    justify-content: flex-start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-left: 100px;
+    margin-top: 230px;
+    width: 200px; 
+    border: 1px #423F32 solid;
+}
+
+.filtros h5 {
+    font-size: 24px;
+    color: #423F32;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #423F32;
+    padding-bottom: 10px;
+}
+
+.filtros .filtro-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filtros .filtro-opcoes input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.filtros .filtro-opcoes label {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filtros .btnfiltro {
+    background-color: #415B4F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; 
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+div.filtros .btnfiltro:hover {
+    background-color: #557566;
+}
+
+.caixa-pesquisa{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    display: flex;
+    margin: 0;
+    cursor: pointer;
+    padding: 0px 20px;
+    background: #000;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.caixa-pesquisa input{
+    position: relative;
+    width: 400px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: none;
+    background: transparent;
+    color: #F1EBE5;
+    margin: auto;
+    font-size: 24px;
+}
+
+.caixa-pesquisa input::placeholder{
+    color: #F1EBE5;
+    opacity: 1;
+}
+
+.caixa-pesquisa .material-symbols-outlined.procurar{
+    position: relative;
+    color: #F1EBE5;
+    font-size: 24px; 
+    margin: auto;
+}
+
+.caixa-pesquisa button {
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: none;
+    background: transparent;
+    color: #F1EBE5;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.resultados ul{
+    border-top: 1px solid #999;
+}
+
+.resultados ul li{
+    list-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.resultados ul li:hover{
+    background: #423F32;
+}
+
+.resultados{
+    max-height: 300px;
+    overflow-y: scroll;
+}

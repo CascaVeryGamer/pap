@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif+Caption&family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Serif", serif;
+}
+
+body{
+    background-color: #415B4F;
+}
+
+#pag1{
+    background-color: #415B4F;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+.logo{
+    position: relative;
+    top: -420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 0px;
+    padding: 0px 10px;
+    align-items: center;
+}
+
+.logo h1{
+    color: #fff;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 400px;
+    width: 100%;
+    align-items: center;
+    z-index: 9999;
+}
+
+.titulo h1{
+    color: #F1EBE5;
+    font-size: 100px;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 20px;
+}
+
+.titulo h2{
+    color: #F1EBE5;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Dancing Script", serif;
+    font-weight: 600;
+}
+
+.barralado{
+    background-color: #101010;
+    width: 270px;
+    margin: 16px;
+    position: fixed;
+    border-radius: 16px;
+    height: calc(100vh - 32px);
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.barralado .header{
+    position: relative;
+    display: flex;
+    padding: 25px 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.barralado .toggler{
+    position: absolute;
+    right: 25px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    color: #101010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.4s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.barralado .secondary-nav{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.barralado.collapsed .barralado .lista-nav{
+    transform: translateY(65px);
+}
+
+.barralado.collapsed .barralado-header .toggler{
+    transform: translate(-4px, 65px);
+}
+
+.barralado .toggler:hover{
+    background: #F1EBE5;
+}
+
+.barralado .toggler span{
+    font-size: 1.75rem;
+    transition: 0.4s ease;
+}
+
+.barralado .collapsed{
+    width: 85px;
+}
+
+.barralado .link-nav {
+    text-decoration: none;
+    color: #F1EBE5;
+    display: flex;
+    gap: 12px;
+    white-space: nowrap;
+    border-radius: 8px;
+    align-items: center;
+    padding: 12px 15px;
+    transition: 0.4s ease;
+}
+
+.barralado.collapsed .barralado-header .toggler span{
+    transform: rotate(180deg);
+}
+
+.barralado .lista-nav{
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 0 15px;
+    flex-direction: column;
+    transform: translateY(15px);
+    transition: 0.4s ease;
+}
+
+.barralado .link-nav:hover{
+    color: #101010;
+    background: #F1EBE5;
+}
+
+.barralado.collapsed{
+    width: 85px;
+}
+
+.barralado .link-nav .label-nav{
+    transition: opacity 0.4s ease;
+    
+}
+
+.barralado.collapsed .link-nav .label-nav{
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.barralado .conteudo-nav{
+    position: relative;
+}
+
+.barralado .tooltip{
+    position: absolute;
+    top: -10px;
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+    left: calc(100% + 25px);
+    background: #101010;
+    color: #F1EBE5;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0s;
+}
+
+.barralado .conteudo-nav:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(50%);
+    transition: 0.4s ease;
+}
+
+.barralado.collapsed .tooltip{
+    display: block;
+}
+
+/*Pesquisa*/
+
+.caixa-pesquisa{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    display: flex;
+    margin: 0;
+    cursor: pointer;
+    padding: 0px 20px;
+    background: #000;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.caixa-pesquisa input{
+    position: relative;
+    width: 400px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: none;
+    background: transparent;
+    color: #F1EBE5;
+    margin: auto;
+    font-size: 24px;
+}
+
+.caixa-pesquisa input::placeholder{
+    color: #F1EBE5;
+    opacity: 1;
+}
+
+.caixa-pesquisa .material-symbols-outlined.procurar{
+    position: relative;
+    color: #F1EBE5;
+    font-size: 24px; 
+    margin: auto;
+}
+
+.caixa-pesquisa button {
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: none;
+    background: transparent;
+    color: #F1EBE5;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.resultados ul{
+    border-top: 1px solid #999;
+}
+
+.resultados ul li{
+    list-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.resultados ul li:hover{
+    background: #423F32;
+}
+
+.resultados{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#pag2{
+    position:static;
+    height: 100vh;
+    background-color: #F1EBE5;
+    box-sizing: border-box;
+}
+
+.pag2 h1{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 100px;
+    color: #F1EBE5;
+    font-size: 32px;
+    border-bottom: 2px solid #F1EBE5;
+    padding-bottom: 10px;
+}
+
+main{
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 85%;
+    margin-left: 10%;
+}
+
+main .card-nov{
+    max-width: 300px;
+    border-radius: 22px;
+    flex: 1 1 210px;
+    text-align: center;
+    height: 450px;
+    border: 1px solid #000;
+    background-color: #000;
+    margin: 20px;
+    position: relative;
+    top: 200px;
+    transition: 0.5s;
+}
+
+main .card-nov:hover{
+    transform:scale(1.05);
+}
+
+main .card-nov .imagem{
+    height: 50%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+main .card-nov .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+main .card-nov a{
+    width: 50%;
+}
+
+main .card-nov .ver{
+    border-radius: 10px;
+    padding: 1em;
+    background-color: #415B4F;
+    font-size: 16px;
+    color: #fff;
+    width: 30%;
+    cursor: pointer;
+    margin-top: 1em;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+main .card-nov .ver:hover{
+    background-color: #557566;
+}
+
+.nome_planta{
+    font-size: 20px!important;
+    justify-content: center;
+    color: #fff;
+}
+
+.preço{
+    color: #fff;
+}

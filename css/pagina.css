@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif+Caption&family=PT+Serif:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+
+body{
+  background-color: #F5F5F5;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #423F32;
+  padding: 20px 60px;
+  margin: 30px;
+}
+
+.logo h1{
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.terminar-sessao{
+  background-color: #415B4F; 
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.terminar-sessao:hover{
+  background-color: #32463d; 
+}
+
+.menu{
+  justify-content: space-between;
+  align-items: left;
+  padding: 60px;
+}
+
+.menu ul{
+  list-style: none;
+}
+
+.menu ul li button{
+  border: none;
+  background-color: #F5F5F5;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu button{
+  transition: color 0.3s ease;
+}
+
+.active-button{
+  color: #415B4F !important;
+}
+
+.content-section {
+  display: none; 
+}
+
+.content-section.active {
+  display: flex; 
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.info-box p{
+  margin: 0;
+  font-size: 16px;
+  color: #423F32;
+}
+
+.btn-edit{
+  background-color: #415B4F;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-edit:hover{
+  background-color: #32463d;
+}
+
+.btn-edit span{
+  font-size: 16px;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%; 
+}
+
+.info-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
